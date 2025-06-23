@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>posts page</title>
-</head>
-<body>
-    <h1>posts</h1>
-</body>
-</html>
+@extends('layout.main')
+@section('container')
+    @foreach($blog as $post)
+        <h1> 
+            <a href="/posts/{{ $post->slug }} ">{{ $post->judul }}</a></h1>
+        <h2> {{ $post->author }} </h2>
+        <p> {{ $post->sedikit }} </p>
+    @endforeach
+@endsection

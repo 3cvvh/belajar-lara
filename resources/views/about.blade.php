@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about page</title>
-</head>
-<body>
+@extends('layout.main')
+@section('container')
     <h1>about</h1>
-    <p>nama saya <?php echo $nama ?> </p>
-    <p>saya bersekolah di <?php echo $sekolah ?> </p>
-    <p>umur saya <?php echo $umur ?> </p>
-</body>
-</html>
+    <p>nama saya {{ $nama }} </p>
+    <p>saya bersekolah di {{ $sekolah }} </p>
+    <p>umur saya {{ $umur }} </p>
+@endsection

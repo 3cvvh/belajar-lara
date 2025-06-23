@@ -1,4 +1,4 @@
 @extends('layout.main')
 @section('container')
-    <h1>Hello, world!</h1>
+<p>halo </p>
 @endsection
