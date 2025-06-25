@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\galerController;
-
+use App\Http\Controllers\KategoriController;
+use App\Models\Kategori;
 
 Route::get('/', function () {
     return view('home',[
@@ -22,3 +23,5 @@ Route::get('/posts', [PostController::class, 'index']);
 
 Route::get('posts/{post:slug}', [PostController::class, 'singles']);
 Route::get('/galer', [galerController::class, 'index']);
+Route::get('/cate/{kategori:slug}',[KategoriController::class, 'index']);
+Route::get('/kategoris', [KategoriController::class, 'kategoris']);

@@ -2,6 +2,7 @@
 @section('container')
     <h1> {{ $post->judul }} </h1>
     <p>By: {{ $post->author }}</p>
+    <p>kategori: <a href="/cate/{{ $post->kategori->slug }}">{{ $post->kategori->name }}</a></p>
     <div>
 {!! $post->body !!}
     </div>
