@@ -19,4 +19,7 @@ class post extends Model
  public function Kategori(){
     return $this->belongsTo(Kategori::class);
  }
+ public function user(){
+   return $this->belongsTo(User::class);
+ }
 }

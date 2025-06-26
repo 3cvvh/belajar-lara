@@ -17,7 +17,8 @@ class KategoriFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->sentence(mt_rand(2,8)),
+            'slug' => $this->faker->slug(),
         ];
     }
 }

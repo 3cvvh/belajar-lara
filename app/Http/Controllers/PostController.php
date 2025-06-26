@@ -11,7 +11,8 @@ class PostController extends Controller
     public function index(){
           return view('posts',[
         'judul' => 'blog | page',
-        'blog' => post::all()
+        // 'blog' => post::all()
+        'blog' => post::latest()->get()
     ]);
     }
     public function singles( ModelsPost $post){
